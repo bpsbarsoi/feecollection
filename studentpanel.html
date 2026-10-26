@@ -469,8 +469,8 @@
         if(!sid || !mobile) {
             Swal.fire({
                 icon: 'warning',
-                title: 'Adhoori Jaankari',
-                text: 'Kripya Student ID aur Mobile Number dono bharein',
+                title: 'Incorrect Details',
+                text: 'Please fill Student ID and Mobile Number.',
                 confirmButtonColor: '#4f46e5'
             });
             return;
@@ -487,7 +487,7 @@
             if(result.status === "error") {
                 Swal.fire({
                     icon: 'error',
-                    title: 'Login Asafal',
+                    title: 'Login failed',
                     text: result.message,
                     confirmButtonColor: '#ef4444'
                 });
@@ -532,7 +532,7 @@
     function renderDashboard(records) {
         if(!records || records.length === 0) {
             document.getElementById('total-due-val').innerText = "₹0";
-            document.getElementById('history-rows').innerHTML = "<tr><td colspan='8'>Koi fee record nahi mila.</td></tr>";
+            document.getElementById('history-rows').innerHTML = "<tr><td colspan='8'>No record found.</td></tr>";
             return;
         }
 
