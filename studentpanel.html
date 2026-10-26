@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARSOI PUBLIC SCHOOL - PARENT PORTAL</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- SweetAlert2 CDN -->
+    <!-- SweetAlert2 CDN added -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         :root { --p: #4c46e5; --p-dark: #3730a3; --bg: #f3f4f6; }
@@ -469,8 +469,8 @@
         if(!sid || !mobile) {
             Swal.fire({
                 icon: 'warning',
-                title: 'Incorrect Details',
-                text: 'Please fill Student ID and Mobile Number.',
+                title: 'Missing Details',
+                text: 'Please enter both Student ID and Mobile Number',
                 confirmButtonColor: '#4f46e5'
             });
             return;
@@ -487,7 +487,7 @@
             if(result.status === "error") {
                 Swal.fire({
                     icon: 'error',
-                    title: 'Login failed',
+                    title: 'Login Failed',
                     text: result.message,
                     confirmButtonColor: '#ef4444'
                 });
@@ -523,7 +523,7 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Connection Error',
-                text: "Could not connect server : " + e.message,
+                text: 'Could not connect server : ' + e.message,
                 confirmButtonColor: '#ef4444'
             });
         }
@@ -532,7 +532,7 @@
     function renderDashboard(records) {
         if(!records || records.length === 0) {
             document.getElementById('total-due-val').innerText = "₹0";
-            document.getElementById('history-rows').innerHTML = "<tr><td colspan='8'>No record found.</td></tr>";
+            document.getElementById('history-rows').innerHTML = "<tr><td colspan='8'>No fee records found.</td></tr>";
             return;
         }
 
