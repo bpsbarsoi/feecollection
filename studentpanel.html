@@ -4,186 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARSOI PUBLIC SCHOOL - PARENT PORTAL</title>
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --p: #4c46e5; 
-            --p-dark: #3730a3; 
-            --bg: #f3f4f6;
-            --bg-dark: #061e1b;
-            --card-dark: #0d2f2b;
-            --card-border: rgba(20, 184, 166, 0.2);
-            --accent-gradient: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%);
-            --accent-hover: linear-gradient(135deg, #0f766e 0%, #0891b2 100%);
-            --text-main: #f0fdfa;
-            --text-muted: #99f6e4;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body { 
-            background: var(--bg); 
-            margin: 0; 
-            padding: 0; 
-        }
-
-        /* --- LOGIN SCREEN STYLE --- */
-        #login-screen { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            padding: 1.5rem 1rem; 
-            box-sizing: border-box;
-            background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(13, 148, 136, 0.25) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.2) 0px, transparent 50%);
-        }
-
-        .login-card { 
-            background: #ffffff; 
-            border-radius: 24px; 
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); 
-            width: 100%; 
-            max-width: 420px; 
-            overflow: hidden; 
-            color: #1e293b;
-            transition: all 0.3s ease;
-        }
-
-        .login-card-header { 
-            background: linear-gradient(135deg, #0f766e 0%, #0e7490 100%); 
-            padding: 2rem 1.5rem; 
-            text-align: center; 
-            color: #ffffff;
-            position: relative;
-        }
-
-        .header-icon-circle { 
-            width: 70px; 
-            height: 70px; 
-            background: rgba(255, 255, 255, 0.15); 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            margin: 0 auto 1rem auto; 
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fbbf24;
-            font-size: 1.8rem;
-        }
-
-        .login-card-header h2 { 
-            font-size: 1.5rem; 
-            font-weight: 700; 
-            letter-spacing: 0.5px; 
-            margin: 0;
-            color: #ffffff;
-        }
-
-        .login-card-header p { 
-            font-size: 0.75rem; 
-            color: #ccfbf1; 
-            margin-top: 0.25rem; 
-        }
+        :root { --p: #4c46e5; --p-dark: #3730a3; --bg: #f3f4f6; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); margin: 0; padding: 0; }
         
-        .login-form { 
-            padding: 1.8rem 1.5rem; 
-        }
+        .top-bar { background: #1e293b; color: white; padding: 10px; text-align: center; font-weight: 600; font-size: 13px; display: flex; justify-content: center; align-items: center; gap: 8px; }
+
+        #login-screen { display: flex; justify-content: center; align-items: center; min-height: 90vh; padding: 15px; box-sizing: border-box; }
+        .login-card { background: white; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); width: 100%; max-width: 360px; overflow: hidden; text-align: center; }
+        .login-header { background: linear-gradient(135deg, #5145cd, #4338ca); color: white; padding: 25px 15px; }
+        .login-icon { background: rgba(255,255,255,0.2); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 20px; }
+        .login-header h2 { margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 0.5px; }
+        .login-header p { margin: 3px 0 0; font-size: 10px; opacity: 0.8; }
         
-        .input-group { 
-            margin-bottom: 1.25rem; 
-            text-align: left; 
-        }
+        .login-body { padding: 20px; }
+        .login-body h3 { margin: 0 0 4px; font-size: 14px; color: #1e293b; }
+        .login-sub { font-size: 10px; color: #64748b; margin-bottom: 18px; }
+        
+        .input-box { margin-bottom: 12px; text-align: left; }
+        .input-box label { font-size: 10px; font-weight: 600; color: #475569; display: block; margin-bottom: 4px; }
+        .input-field { display: flex; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 12px; }
+        .input-field span { font-size: 14px; margin-right: 8px; color: #94a3b8; }
+        .input-field input { border: none; background: transparent; outline: none; width: 100%; font-size: 12px; font-weight: 500; color: #1e293b; }
 
-        .input-group label { 
-            display: block; 
-            margin-bottom: 0.4rem; 
-            font-size: 0.75rem; 
-            color: #475569; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px; 
-        }
+        .btn-portal { width: 100%; padding: 10px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; margin-top: 10px; transition: 0.2s; }
+        .btn-portal:hover { background: #4338ca; }
+        .login-footer { font-size: 9px; color: #94a3b8; margin-top: 15px; margin-bottom: 5px; }
 
-        .input-wrapper { 
-            position: relative; 
-            display: flex; 
-            align-items: center; 
-        }
-
-        .input-wrapper i { 
-            position: absolute; 
-            left: 1rem; 
-            color: #94a3b8; 
-            font-size: 0.95rem; 
-        }
-
-        .input-wrapper input { 
-            width: 100%; 
-            padding: 0.85rem 1rem 0.85rem 2.6rem; 
-            background: #f8fafc; 
-            border: 1px solid #cbd5e1; 
-            border-radius: 12px; 
-            font-size: 0.9rem; 
-            color: #0f172a; 
-            outline: none; 
-            transition: all 0.2s ease; 
-            font-weight: 500; 
-        }
-
-        .input-wrapper input:focus { 
-            border-color: #0d9488; 
-            background: #ffffff; 
-            box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15); 
-        }
-
-        .btn-login { 
-            width: 100%; 
-            padding: 0.9rem; 
-            background: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%); 
-            color: white; 
-            border: none; 
-            border-radius: 12px; 
-            font-size: 0.95rem; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: all 0.3s ease; 
-            box-shadow: 0 10px 20px -5px rgba(13, 148, 136, 0.4); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 8px; 
-            margin-top: 1.5rem; 
-        }
-
-        .btn-login:disabled {
-            background: #94a3b8;
-            cursor: not-allowed;
-        }
-
-        .form-footer-tag { 
-            background: #f8fafc; 
-            padding: 0.75rem; 
-            text-align: center; 
-            border-top: 1px solid #f1f5f9; 
-            font-size: 0.75rem; 
-            color: #64748b; 
-        }
-
-        /* --- DASHBOARD STYLES --- */
         #dashboard-screen { display: none; max-width: 1100px; margin: 15px auto; padding: 0 10px; }
         .dashboard-container { display: flex; gap: 15px; align-items: flex-start; }
         
@@ -223,9 +71,28 @@
 
         .portal-iframe { width: 100%; height: 650px; border: none; border-radius: 8px; background: #ffffff; }
 
+        #custom-loader { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 99999; justify-content: center; align-items: center; color: white; font-weight: bold; font-size: 14px; }
+        
         #receipt-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999; overflow-y: auto; padding: 10px; box-sizing: border-box; }
         .print-wrapper { display: flex; justify-content: center; width: 100%; margin: 0 auto; padding: 5mm; box-sizing: border-box; }
         .receipt-box { width: 100%; max-width: 480px; background: #ffdae9; border: 1.5px solid #000; padding: 12px; color: #000; font-family: Arial, sans-serif; box-sizing: border-box; display: flex; flex-direction: column; }
+        
+        .r-header { position: relative; }
+        .r-header h2 { margin: 0; font-size: 16px; font-weight: 900; text-align: center; color: #000; }
+        .r-header p { margin: 1px; font-size: 8px; font-weight: bold; text-align: center; color: #000; }
+        .school-logo { width: 45px; height: 45px; position: absolute; left: 5px; top: 15px; }
+        
+        .top-info { display: flex; justify-content: space-between; font-size: 9.5px; margin-top: 4px; border-bottom: 1px solid #000; padding-bottom: 2px; }
+        .copy-tag { background: #000; color: #fff; padding: 1px 6px; font-size: 8px; font-weight: bold; text-transform: uppercase; border-radius: 2px; }
+        .student-details { display: grid; grid-template-columns: 1.2fr 0.8fr; font-size: 9.5px; margin-top: 4px; line-height: 1.2; }
+        
+        .r-table { width: 100%; border-collapse: collapse; margin-top: 4px; border: 1.2px solid #000; background: transparent; }
+        .r-table th { background: transparent !important; color: #000 !important; border: 1px solid #000; padding: 2px 4px; font-size: 9px; font-weight: bold; line-height: 1.1; }
+        .r-table td { background: transparent !important; color: #000 !important; border: 1px solid #000; padding: 2px 4px; font-size: 9px; line-height: 1.1; }
+        .r-table tfoot th, .r-table tfoot td { background: transparent !important; }
+        
+        .words-section { border-bottom: 1px dotted #000; padding: 3px 0; font-size: 9px; margin-top: 5px; font-style: italic; }
+        .footer-sigs { display: flex; justify-content: space-between; margin-top: 20px; padding-top: 15px; font-size: 9.5px; font-weight: bold; }
 
         @media (max-width: 768px) {
             .dashboard-container { flex-direction: column; }
@@ -235,49 +102,60 @@
             .sidebar-menu-content.open { display: block; }
             .portal-iframe { height: 500px; }
         }
+
+        @media print { 
+            @page { size: A4 portrait; margin: 0; } 
+            body > *:not(#receipt-modal) { display: none !important; } 
+            #receipt-modal { display: block !important; position: absolute !important; left: 0 !important; top: 0 !important; width: 100% !important; height: auto !important; background: #ffffff !important; padding: 0 !important; margin: 0 !important; } 
+            .no-print { display: none !important; } 
+            .print-wrapper { width: 100% !important; padding: 5mm !important; display: flex !important; justify-content: center !important; box-sizing: border-box !important; }
+            .receipt-box { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; width: 100% !important; max-width: 100% !important; }
+        }
     </style>
 </head>
 <body>
 
-<!-- LOGIN SCREEN -->
+<div id="custom-loader">
+    <div style="background:#fff; color:#000; padding:15px 25px; border-radius:8px;">Authenticating... Please Wait.</div>
+</div>
+
+<div class="top-bar no-print">
+    🎓 BARSOI PUBLIC SCHOOL - PARENT PORTAL
+</div>
+
 <div id="login-screen" class="no-print">
     <div class="login-card">
-        <div class="login-card-header">
-            <div class="header-icon-circle">
-                <i class="fas fa-user-graduate"></i>
-            </div>
-            <h2>Student Portal</h2>
-            <p>Login with ID/Roll No & Registered Mobile</p>
+        <div class="login-header">
+            <div class="login-icon">🎓</div>
+            <h2>BARSOI PUBLIC SCHOOL</h2>
+            <p>Student Fee & Profile Portal</p>
         </div>
-        
-        <div class="login-form">
-            <div class="input-group">
-                <label for="login-sid">Student ID / Roll No</label>
-                <div class="input-wrapper">
-                    <i class="fas fa-id-card"></i>
-                    <input type="text" id="login-sid" placeholder="e.g. 77" required>
-                </div>
-            </div>
-            <div class="input-group">
-                <label for="login-mobile">Mobile Number</label>
-                <div class="input-wrapper">
-                    <i class="fas fa-phone"></i>
-                    <input type="text" id="login-mobile" placeholder="e.g. 9471685668" required>
-                </div>
-            </div>
-            <button type="button" id="submitBtn" class="btn-login" onclick="loginStudent()">
-                <span id="btnText">Login to Portal</span>
-                <i class="fas fa-arrow-right" id="btnIcon"></i>
-            </button>
-        </div>
+        <div class="login-body">
+            <h3>Student Login</h3>
+            <div class="login-sub">Login with ID/Roll No & Registered Mobile</div>
 
-        <div class="form-footer-tag">
-            Powered by Barsoi Public School Digital Systems
+            <div class="input-box">
+                <label>Student ID / Roll No</label>
+                <div class="input-field">
+                    <span>💳</span>
+                    <input type="text" id="login-sid" placeholder="e.g. 77">
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>Mobile Number</label>
+                <div class="input-field">
+                    <span>📞</span>
+                    <input type="text" id="login-mobile" placeholder="e.g. 9471685668">
+                </div>
+            </div>
+
+            <button class="btn-portal" onclick="loginStudent()">Login to Portal ➔</button>
+            <div class="login-footer">Powered by Barsoi Public School Digital Systems</div>
         </div>
     </div>
 </div>
 
-<!-- DASHBOARD SCREEN -->
 <div id="dashboard-screen" class="no-print">
     <div class="dashboard-container">
         
@@ -411,8 +289,18 @@
     </div>
 </div>
 
+<div id="receipt-modal">
+    <div class="print-wrapper">
+        <div class="receipt-box" id="guardian-copy"></div>
+    </div>
+    <div class="no-print" style="text-align:center; margin-top:15px; padding-bottom:30px; display:flex; justify-content:center; gap:10px;">
+        <button onclick="triggerReceiptPrint()" style="padding:8px 20px; background:#16a34a; color:white; border:none; cursor:pointer; font-weight:bold; border-radius:5px; font-size:11px;">PRINT / SAVE PDF 🖨️</button>
+        <button onclick="closeReceipt()" style="padding:8px 20px; background:#475569; color:white; border:none; border-radius:5px; cursor:pointer; font-size:11px;">CLOSE ✖</button>
+    </div>
+</div>
+
 <script>
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwgInUry6aOVsKq0ZEPO_dXWKOm_4MI0ZbqmbXJ5xuWYrmriod3dL34bQtU1YzbpLDPjw/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyQ1K8Uk-j52g8rcW9IuRGgOro_G9Q1LubH1dhVX1mr-eMjAZqHcL6l4dWGPJrHdXl-/exec";
     
     const BASE_URLS = {
         admit:          "https://barsoipublicschool.github.io/admitcard",
@@ -470,6 +358,10 @@
         return "";
     }
 
+    function getProp(obj, fieldName) {
+        return fetchAnyProp(obj, [fieldName]);
+    }
+
     function getDirectImageUrl(url) {
         if (!url || url === "" || url === "N/A" || typeof url !== 'string') {
             return "https://via.placeholder.com/75x90?text=No+Photo";
@@ -490,7 +382,37 @@
             let year = d.getFullYear();
             return `${day}/${month}/${year}`;
         }
+        if (typeof val === 'string' && (val.includes('/') || val.includes('-'))) {
+            let parts = val.split(/[/\-]/);
+            if (parts.length === 3) {
+                if (parts[0].length === 4) {
+                    let day = parts[2].padStart(2, '0');
+                    let month = parts[1].padStart(2, '0');
+                    return `${day}/${month}/${parts[0]}`;
+                } else {
+                    let day = parts[0].padStart(2, '0');
+                    let month = parts[1].padStart(2, '0');
+                    return `${day}/${month}/${parts[2]}`;
+                }
+            }
+        }
         return val;
+    }
+
+    function roman(n) { const r = ["i","ii","iii","iv","v","vi","vii","viii","ix","x"]; return r[n-1] || n; }
+
+    function numberToWords(num) {
+        var a = ['','One ','Two ','Three ','Four ', 'Five ','Six ','Seven ','Eight ','Nine ','Ten ','Eleven ','Twelve ','Thirteen ','Fourteen ','Fifteen ','Sixteen ','Seventeen ','Eighteen ','Nineteen '];
+        var b = ['', '', 'Twenty','Thirty','Forty','Fifty', 'Sixty','Seventy','Eighty','Ninety'];
+        if (num == 0) return 'Zero';
+        var n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+        if (!n) return ''; var str = '';
+        str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore ' : '';
+        str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'Lakh ' : '';
+        str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'Thousand ' : '';
+        str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'Hundred ' : '';
+        str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) : '';
+        return str.trim();
     }
 
     function switchTab(e, tabId) {
@@ -504,15 +426,32 @@
 
         let queryParams = `?roll=${encodeURIComponent(currentStudentRoll)}&class=${encodeURIComponent(currentStudentClass)}`;
 
+        // Lazy Loading iFrames on demand to prevent WebView freeze/white screen
         if(tabId === 'admit-section' && BASE_URLS.admit) {
             let frame = document.getElementById('iframe-admit');
-            if(frame.src.includes('about:blank')) frame.src = BASE_URLS.admit + queryParams;
+            if(frame.src.includes('about:blank') || frame.src === window.location.href) {
+                frame.src = BASE_URLS.admit + queryParams;
+            }
         } else if(tabId === 'icard-section' && BASE_URLS.icard) {
             let frame = document.getElementById('iframe-icard');
-            if(frame.src.includes('about:blank')) frame.src = BASE_URLS.icard + queryParams;
+            if(frame.src.includes('about:blank') || frame.src === window.location.href) {
+                frame.src = BASE_URLS.icard + queryParams;
+            }
         } else if(tabId === 'result-section' && BASE_URLS.result) {
             let frame = document.getElementById('iframe-result');
-            if(frame.src.includes('about:blank')) frame.src = BASE_URLS.result + queryParams;
+            if(frame.src.includes('about:blank') || frame.src === window.location.href) {
+                frame.src = BASE_URLS.result + queryParams;
+            }
+        } else if(tabId === 'homework-section' && BASE_URLS.homework) {
+            let frame = document.getElementById('iframe-homework');
+            if(frame.src.includes('about:blank') || frame.src === window.location.href) {
+                frame.src = BASE_URLS.homework + queryParams;
+            }
+        } else if(tabId === 'progress-section' && BASE_URLS.progress) {
+            let frame = document.getElementById('iframe-progress');
+            if(frame.src.includes('about:blank') || frame.src === window.location.href) {
+                frame.src = BASE_URLS.progress + queryParams;
+            }
         }
 
         if(window.innerWidth <= 768) {
@@ -521,34 +460,25 @@
         }
     }
 
-    // --- REFACTORED SECURE LOGIN FUNCTION ---
     async function loginStudent() {
         let sid = document.getElementById('login-sid').value.trim();
         let mobile = document.getElementById('login-mobile').value.trim();
 
         if(!sid || !mobile) {
-            alert("Kripya Student ID aur Mobile Number dono bharein.");
+            alert("Kripya Student ID aur Mobile Number dono bharein");
             return;
         }
 
-        let submitBtn = document.getElementById('submitBtn');
-        let btnText = document.getElementById('btnText');
-        let btnIcon = document.getElementById('btnIcon');
-
-        submitBtn.disabled = true;
-        btnText.innerText = "Verifying...";
-        btnIcon.className = "fas fa-spinner fa-spin";
+        document.getElementById('custom-loader').style.display = 'flex';
 
         try {
-            const reqUrl = `${SCRIPT_URL}?action=verifyLogin&id=${encodeURIComponent(sid)}&mobile=${encodeURIComponent(mobile)}`;
-            const res = await fetch(reqUrl, { method: 'GET', redirect: 'follow' });
+            const res = await fetch(`${SCRIPT_URL}?action=verifyLogin&id=${encodeURIComponent(sid)}&mobile=${encodeURIComponent(mobile)}`);
             const result = await res.json();
+            
+            document.getElementById('custom-loader').style.display = 'none';
 
             if(result.status === "error") {
-                alert(result.message || "Invalid ID or Mobile Number!");
-                submitBtn.disabled = false;
-                btnText.innerText = "Login to Portal";
-                btnIcon.className = "fas fa-arrow-right";
+                alert(result.message);
                 return;
             }
 
@@ -577,10 +507,8 @@
             document.getElementById('dashboard-screen').style.display = 'block';
 
         } catch(e) {
-            alert("Network/Server Connection Error: " + e.message);
-            submitBtn.disabled = false;
-            btnText.innerText = "Login to Portal";
-            btnIcon.className = "fas fa-arrow-right";
+            document.getElementById('custom-loader').style.display = 'none';
+            alert("Could not connect server : " + e.message);
         }
     }
 
@@ -596,7 +524,7 @@
         document.getElementById('total-due-val').innerText = "₹" + totalRemainingDues;
 
         let rowsHtml = "";
-        records.forEach((r) => {
+        records.forEach((r, idx) => {
             let mFee = fetchAnyProp(r, ["School Fee", "Fee"]) || 0;
             let pDues = fetchAnyProp(r, ["Prev Dues", "Previous Dues"]) || 0;
             let pAmt = fetchAnyProp(r, ["Total Paid", "Paid Amount", "Paid"]) || 0;
@@ -611,11 +539,21 @@
                     <td>₹${pDues}</td>
                     <td style="color:#16a34a; font-weight:bold;">₹${pAmt}</td>
                     <td style="color:#dc2626; font-weight:bold;">₹${rem}</td>
-                    <td>-</td>
+                    <td><button class="btn-view-rec" onclick="showDualReceipt(studentRecords[${idx}])">📄 View</button></td>
                 </tr>
             `;
         });
         document.getElementById('history-rows').innerHTML = rowsHtml;
+    }
+
+    function showDualReceipt(d) {
+        if(!d) return;
+        document.getElementById('guardian-copy').innerHTML = generateReceiptHTML(d, "Guardian's Copy");
+        document.getElementById('receipt-modal').style.display = 'block';
+    }
+
+    function closeReceipt() {
+        document.getElementById('receipt-modal').style.display = 'none';
     }
 
     function logout() {
@@ -624,10 +562,103 @@
         document.getElementById('login-sid').value = '';
         document.getElementById('login-mobile').value = '';
         
-        let submitBtn = document.getElementById('submitBtn');
-        submitBtn.disabled = false;
-        document.getElementById('btnText').innerText = "Login to Portal";
-        document.getElementById('btnIcon').className = "fas fa-arrow-right";
+        document.getElementById('iframe-admit').src = 'about:blank';
+        document.getElementById('iframe-icard').src = 'about:blank';
+        document.getElementById('iframe-result').src = 'about:blank';
+        document.getElementById('iframe-homework').src = 'about:blank';
+        document.getElementById('iframe-progress').src = 'about:blank';
+    }
+
+    function generateReceiptHTML(d, type) {
+        let sl = 1; let rows = "";
+        const main = ["Prev Dues", "Admission Fee", "School Fee", "School Van Fee", "Hostel Fee", "Exam Fee"];
+        
+        main.forEach(k => { 
+            let val = parseFloat(getProp(d, k)) || 0;
+            if(val > 0) rows += `<tr><td align="center">${sl++}.</td><td>${k}</td><td align="center">1</td><td align="center">${val}</td></tr>`; 
+        });
+        
+        const lists = {
+            "School Uniform Fee": ["Shirts", "Pants", "T-Shirts", "ID Card", "Leggings", "Blazer", "Sweater", "Belt", "Tie", "Shoes", "Socks", "Logo"],
+            "School Books & Other": ["Books Fee", "Copies", "Cover", "Geo-Box", "Diary", "Stationary"],
+            "Miscellaneous Fees": ["Republic Day Fee", "Independence Day Fee", "UDISE Fee"]
+        };
+
+        for (let category in lists) {
+            let tempRows = ""; let cSub = 1;
+            lists[category].forEach(k => { 
+                let val = parseFloat(getProp(d, k)) || 0;
+                if(val > 0) tempRows += `<tr><td></td><td>(${roman(cSub++)}) ${k}</td><td align="center">1</td><td align="center">${val}</td></tr>`; 
+            });
+            if(tempRows) rows += `<tr><td align="center">${sl++}.</td><td colspan="3"><b>${category}</b></td></tr>` + tempRows;
+        }
+
+        ["School Bag", "Development Fee", "Other Fee"].forEach(k => { 
+            let val = parseFloat(getProp(d, k)) || 0;
+            if(val > 0) rows += `<tr><td align="center">${sl++}.</td><td>${k}</td><td align="center">1</td><td align="center">${val}</td></tr>`; 
+        });
+
+        let logo = "https://lh3.googleusercontent.com/d/14JG21SYtSpghaukrY6_QTB-LCYPZ8gkE=s300";
+        let pDate = fetchAnyProp(d, ["Paid Date", "Date"]);
+        let displayDate = pDate ? formatDateDDMMYYYY(pDate) : formatDateDDMMYYYY(new Date());
+        let totalPaidNum = parseFloat(fetchAnyProp(d, ["Total Paid", "Paid Amount"])) || 0;
+
+        return `
+            <div class="receipt-inner" style="display:flex; flex-direction:column; height:100%;">
+                <div class="r-header">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
+                        <span class="copy-tag" style="width:75px;">${type}</span>
+                        <span style="font-weight:bold; font-size:10px; border:1px solid #000; padding:0 8px;">CASH MEMO</span>
+                        <span style="font-size:7.5px; width:75px; text-align:right;">Mob: 9279583673</span>
+                    </div>
+                    <img src="${logo}" class="school-logo">
+                    <h2>BARSOI PUBLIC SCHOOL</h2>
+                    <p>NEHAR NAGAR, BARSOI (KATIHAR)</p>
+                    <p style="font-size:7px">RTE Reg No. | UDISE No.10101119902</p>
+                    <p style="font-size:7px">email - barsoipublicschool125@gmail.com</p>
+                </div>
+                <div class="top-info"><span>Receipt No: <b>${fetchAnyProp(d, ["Receipt No", "Receipt"]) || "________"}</b></span><span>Date: ${displayDate}</span></div>
+                <div class="student-details">
+                    <div><b>Name:</b> ${fetchAnyProp(d, ["Student Name", "Name"])}</div><div><b>ID:</b> ${fetchAnyProp(d, ["Student Id", "ID"])}</div>
+                    <div><b>Father:</b> ${fetchAnyProp(d, ["Father Name", "Father"])}</div><div><b>Class:</b> ${fetchAnyProp(d, ["Class"])}</div>
+                    <div><b>Address:</b> ${fetchAnyProp(d, ["Address"])}</div><div><b>Month:</b> ${fetchAnyProp(d, ["Month"])}</div>
+                </div>
+                <table class="r-table">
+                    <thead><tr><th>Sl.</th><th>Description</th><th>Qty</th><th>Amount</th></tr></thead>
+                    <tbody>${rows}</tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" align="right">Sub Total</th>
+                            <td align="center">${fetchAnyProp(d, ["Sub Total"]) || 0}</td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" align="right" style="color: #ca8a04;">Discount (-)</th>
+                            <td align="center" style="color: #ca8a04 !important; font-weight: bold;">${fetchAnyProp(d, ["Discount"]) || 0}</td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" align="right" style="color: #16a34a;">Net Paid</th>
+                            <td align="center" style="color: #16a34a !important; font-weight: bold;">${totalPaidNum}</td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" align="right" style="color: #dc2626;">Due Balance</th>
+                            <td align="center" style="color: #dc2626 !important; font-weight: bold;">${fetchAnyProp(d, ["Remaining", "Due Balance"]) || 0}</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="words-section"><b>Words:</b> ${numberToWords(totalPaidNum)} Only.</div>
+                <div class="footer-sigs"><span>Parent Signature</span><span>Authorized Signature</span></div>
+            </div>`;
+    }
+
+    function triggerReceiptPrint() {
+        if (typeof AndroidPrint !== 'undefined' && AndroidPrint.triggerPrint) {
+            AndroidPrint.triggerPrint();
+            return;
+        }
+
+        setTimeout(function() {
+            window.print();
+        }, 150);
     }
 </script>
 </body>
